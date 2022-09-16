@@ -1,4 +1,4 @@
-type Props = { name: string, times?: number }
+type Props = { name: string; times?: number };
 
 const Greet: React.FC<Props> = ({ name, times = 1 }) => {
   return (
@@ -7,7 +7,7 @@ const Greet: React.FC<Props> = ({ name, times = 1 }) => {
         <p key={i}>Hello, {name}!</p>
       ))}
     </>
-  )
-}
+  );
+};
 
-export default Greet
+export default Greet;

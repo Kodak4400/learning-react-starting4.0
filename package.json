@@ -19,6 +19,10 @@
     "prepare": "npx simple-git-hooks || :"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.3.2",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "framer-motion": "^7.3.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -64,6 +68,6 @@
     ]
   },
   "simple-git-hooks": {
-    "pre-commit": "npm run lint-staged"
+    "pre-commit": "npx lint-staged"
   }
 }

@@ -1,10 +1,10 @@
-import { useRef } from 'react'
+import { useRef } from 'react';
 
 const TextInput: React.FC = () => {
-  const inputRef = useRef<HTMLInputElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null);
   const handleClick = () => {
-    inputRef.current?.focus()
-  }
+    inputRef.current?.focus();
+  };
 
   return (
     <div>
@@ -15,7 +15,7 @@ const TextInput: React.FC = () => {
       <input type="text" ref={inputRef} />
       <input type="button" value="フォーカス" onClick={handleClick} />
     </div>
-  )
-}
+  );
+};
 
-export default TextInput
+export default TextInput;

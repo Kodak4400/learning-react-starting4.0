@@ -1,4 +1,8 @@
 import { FC } from 'react';
+import { Heading } from '@chakra-ui/react';
+import type { Character } from 'components/CharacterList';
+import CharacterList from 'components/CharacterList';
+import Counter from 'components/Counter';
 import logo from './assets/react.svg';
 import './App.css';
 import Greet from './components/Greet';
@@ -8,6 +12,37 @@ const title = import.meta.env.VITE_APP_TITLE;
 console.dir(import.meta.env);
 
 const App: FC = () => {
+  const characters: Character[] = [
+    {
+      id: 1,
+      name: '桜木花道',
+      grade: 1,
+      height: 189.2,
+    },
+    {
+      id: 2,
+      name: '流川 楓',
+      grade: 1,
+      height: 187,
+    },
+    {
+      id: 3,
+      name: '宮城リョータ',
+      grade: 2,
+      height: 168,
+    },
+    {
+      id: 4,
+      name: '三井 寿',
+      grade: 3,
+    },
+    {
+      id: 5,
+      name: '赤木剛憲',
+      grade: 3,
+      height: 197,
+    },
+  ];
   const name = 'Patty';
   const greet = (name: string) => <p>Hello, {name || 'Guest'}!</p>;
 
@@ -42,6 +77,18 @@ const App: FC = () => {
         <label htmlFor="favReason">そのキャラクターのどこが好き?</label>
         <textarea id="favReason" defaultValue="【例】見た目が好き" />
       </form>
+      <div className="container">
+        <Heading size="lg" as="h1" my={12}>
+          『SLAM DUNK』登場人物
+        </Heading>
+        <CharacterList school="湘北高校" characters={characters} />
+      </div>
+      <div>
+        <Heading size="lg" as="h1" my={8}>
+          カウンター
+        </Heading>
+        <Counter />
+      </div>
     </div>
   );
 };
