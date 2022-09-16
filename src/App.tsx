@@ -3,6 +3,7 @@ import { Heading } from '@chakra-ui/react';
 import type { Character } from 'components/CharacterList';
 import CharacterList from 'components/CharacterList';
 import Counter from 'components/Counter';
+import Timer from 'components/Timer';
 import logo from './assets/react.svg';
 import './App.css';
 import Greet from './components/Greet';
@@ -88,6 +89,12 @@ const App: FC = () => {
           カウンター
         </Heading>
         <Counter />
+      </div>
+      <div>
+        <Heading size="lg" as="h1" my={8}>
+          {import.meta.env.VITE_APP_TITLE}
+        </Heading>
+        <Timer />
       </div>
     </div>
   );
