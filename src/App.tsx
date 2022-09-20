@@ -7,6 +7,7 @@ import Timer from 'components/Timer';
 import logo from './assets/react.svg';
 import './App.css';
 import Greet from './components/Greet';
+import ProfileWriter from './components/ProfileWriter';
 import RegistrationForm from './components/RegistrationForm';
 import Summary from './components/Summary';
 
@@ -102,6 +103,12 @@ const App: FC = () => {
           {import.meta.env.VITE_APP_TITLE}
         </Heading>
         <RegistrationForm />
+      </div>
+      <div>
+        <Heading size="lg" as="h1" my={8}>
+          {import.meta.env.VITE_APP_TITLE}
+        </Heading>
+        <ProfileWriter count={200} />
       </div>
     </div>
   );
