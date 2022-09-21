@@ -4,12 +4,13 @@ import type { Character } from 'components/CharacterList';
 import CharacterList from 'components/CharacterList';
 import Counter from 'components/Counter';
 import Timer from 'components/Timer';
-import logo from './assets/react.svg';
 import './App.css';
+import Providers from './Providers';
 import Greet from './components/Greet';
 import ProfileWriter from './components/ProfileWriter';
 import RegistrationForm from './components/RegistrationForm';
 import Summary from './components/Summary';
+import IndexRoutes from './routes';
 
 const title = import.meta.env.VITE_APP_TITLE;
 console.dir(import.meta.env);
@@ -51,6 +52,11 @@ const App: FC = () => {
 
   return (
     <div className="App">
+      <div>
+        <Providers>
+          <IndexRoutes />
+        </Providers>
+      </div>
       <h1>{title}</h1>
       <Greet name="Patty" times={4} />
       <Summary title="Maple Town" folded>
@@ -64,7 +70,6 @@ const App: FC = () => {
         </p>
       </Summary>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>Hello World!</p>
         <div>{greet(name)}</div>
       </header>
